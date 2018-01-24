@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Servo;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.drive.MecanumDrive;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -26,6 +27,7 @@ public class RobotMap {
 	public static WPI_TalonSRX BRdrive;
 	public static WPI_TalonSRX BLdrive;
 	public static DifferentialDrive robotDrive;
+	public static MecanumDrive mecanum;
 	public static SpeedControllerGroup left;
 	public static SpeedControllerGroup right;
 	
@@ -44,9 +46,9 @@ public class RobotMap {
 		left = new SpeedControllerGroup(FLdrive, BLdrive);
 		right = new SpeedControllerGroup(FRdrive, BRdrive);
 		robotDrive = new DifferentialDrive(left, right);
-	}
-	
-	public static void DBSolenoidinit() {
+		mecanum = new MecanumDrive(FLdrive, BLdrive, FRdrive, BRdrive);
+		
+		robotDrive.setSafetyEnabled(false);
 		DBsol = new DoubleSolenoid(1, 0, 1);
 	}
 }

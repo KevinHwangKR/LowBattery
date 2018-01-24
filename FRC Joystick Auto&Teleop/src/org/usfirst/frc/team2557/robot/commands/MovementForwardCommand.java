@@ -24,7 +24,6 @@ public class MovementForwardCommand extends Command {
 
     // Make this return true when this Command no = needs to run execute()
     protected boolean isFinished() {
-    	
         return false;
     }
 

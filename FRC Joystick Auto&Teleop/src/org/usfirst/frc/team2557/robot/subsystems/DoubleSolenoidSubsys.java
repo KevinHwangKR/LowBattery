@@ -1,4 +1,4 @@
-package org.usfirst.frc.team2557.robot.subsystems;
+ package org.usfirst.frc.team2557.robot.subsystems;
 
 import org.usfirst.frc.team2557.robot.RobotMap;
 
@@ -24,10 +24,6 @@ public class DoubleSolenoidSubsys extends Subsystem {
     
     public void backward() {
     	RobotMap.DBsol.set(Value.kReverse);
-    }
-    
-    public void stop() {
-    	RobotMap.DBsol.set(Value.kOff);
     }
 }
 

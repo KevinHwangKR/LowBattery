@@ -42,6 +42,7 @@ public class Robot extends TimedRobot {
 		
 		servoSubsys = new ServoSubsys();
 		movementSubsys = new MovementSubsys();
+		dbsSubsys = new DoubleSolenoidSubsys();
 		ComA = new ServoCommand();
 		MovementBackwardCommand = new MovementBackwardCommand();
 		MovementForwardCommand = new MovementForwardCommand();

@@ -18,7 +18,7 @@ public class MovementSubsys extends Subsystem {
 	}
 
     public void initDefaultCommand() {
-    	setDefaultCommand(new MovementForwardCommand());
+    	//setDefaultCommand(new MovementForwardCommand());
     }
     
     public void forward() {
@@ -34,6 +34,13 @@ public class MovementSubsys extends Subsystem {
     
     public void stop() {
     	RobotMap.robotDrive.arcadeDrive(0, 0);
+    }
+    
+    public void rawr() {
+    	RobotMap.mecanum.driveCartesian(
+    			OI.joystickA.getRawAxis(0)*0.4, 
+    			OI.joystickA.getRawAxis(1)*0.4, 
+    			OI.joystickA.getRawAxis(4)*0.4);
     }
 }
 
